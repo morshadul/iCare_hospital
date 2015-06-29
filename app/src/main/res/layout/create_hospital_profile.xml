@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Add Hospital Information"
+        android:id="@+id/hospitalinfo"
+        android:textSize="25sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="NAME"
+        android:id="@+id/name"
+        android:layout_below="@+id/hospitalinfo"
+        android:layout_toLeftOf="@+id/hospitalinfo"
+        android:layout_toStartOf="@+id/hospitalinfo" />
+
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etName"
+        android:layout_alignBottom="@+id/name"
+        android:layout_toRightOf="@+id/address"
+        android:layout_toEndOf="@+id/address" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="ADDRESS"
+        android:id="@+id/address"
+        android:layout_below="@+id/name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/etaddress"
+        android:layout_alignBottom="@+id/address"
+        android:layout_alignRight="@+id/etName"
+        android:layout_alignEnd="@+id/etName"
+        android:layout_toRightOf="@+id/address"
+        android:layout_toEndOf="@+id/address" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="NUMBER"
+        android:id="@+id/number"
+        android:layout_below="@+id/etaddress"
+        android:layout_toStartOf="@+id/etaddress"
+        android:layout_marginTop="33dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/etNumber"
+        android:layout_alignBottom="@+id/number"
+        android:layout_alignRight="@+id/etaddress"
+        android:layout_alignEnd="@+id/etaddress"
+        android:layout_toRightOf="@+id/number"
+        android:layout_toEndOf="@+id/number" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/submit"
+        android:onClick="btnSubmit"
+        android:layout_marginTop="54dp"
+        android:layout_below="@+id/etNumber"
+        android:layout_toRightOf="@+id/name" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="DELETE"
+        android:id="@+id/delete"
+        android:onClick="btnDelete"
+        android:layout_alignTop="@+id/submit"
+        android:layout_alignRight="@+id/hospitalinfo"
+        android:layout_alignEnd="@+id/hospitalinfo" />
+
+</RelativeLayout>
